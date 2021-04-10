@@ -16,7 +16,8 @@ dependencies {
             "org.aspectj:aspectjweaver:1.9.6",
             "com.codeborne:selenide:$selenideVersion",
             "org.junit.jupiter:junit-jupiter-api:$junitVersion",
-            "io.qameta.allure:allure-selenide:2.13.8")
+            "io.qameta.allure:allure-selenide:2.13.8",
+            "org.aeonbits.owner:owner:1.0.12")
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
 }
 
@@ -48,6 +49,5 @@ tasks.withType(Test) {
 }
 
 test {
-//    systemProperties(System.getProperties())
     useJUnitPlatform()
 }
