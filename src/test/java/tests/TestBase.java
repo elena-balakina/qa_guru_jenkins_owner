@@ -33,7 +33,6 @@ public class TestBase {
 //        gradle clean test -Dremote.web.driver="https://user1:1234@selenoid.autotests.cloud/wd/hub/"
 //        gradle clean test -Dremote.web.driver="https://%s:%s@selenoid.autotests.cloud/wd/hub/"
 
-
         String remoteWebDriver = System.getProperty("remote.web.driver");
 
         if (remoteWebDriver != null) {

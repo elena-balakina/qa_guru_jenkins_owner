@@ -9,7 +9,9 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class WebSteps {
-    private final String BASE_URL = "https://demoqa.com/automation-practice-form";
+//    private final String BASE_URL = "https://demoqa.com/automation-practice-form";
+//    gradle clean test -Dbase.url="https://demoqa.com/automation-practice-form"
+    private final String BASE_URL = System.getProperty("base.url");
 
     String firstName = "Ivan";
     String lastName = "Ivanov";
