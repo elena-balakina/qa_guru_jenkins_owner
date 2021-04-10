@@ -15,11 +15,14 @@ public class TestBase {
     static void setup() {
         Configuration.startMaximized = true;
         addListener("AllureSelenide", new AllureSelenide());
-
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
+
+//        gradle clean test
+//        gradle clean test -Dbrowser=firefox
+        Configuration.browser = System.getProperty("browser", "chrome");
 
 //        gradle clean test
 //        gradle clean test -Dremote.web.driver="https://user1:1234@selenoid.autotests.cloud/wd/hub/"
